@@ -199,14 +199,27 @@ def player_stats (players_name) #1
 end #1
 player_stats("Reggie Evans")
 #binding.pry
+<<<<<<< HEAD
 def big_shoe #1
   y = []
+=======
+=begin
+Build a method, big_shoe_rebounds, that will return
+the number of rebounds associated with the player that has the largest shoe size.
+Break this one down into steps:
+First, find the player with the largest shoe size
+Then, return that player's number of rebounds
+=end
+=begin
+def big_shoe_rebounds #1
+>>>>>>> b90893b023fd7643e76f939c30d55279f1fd2fae
   game_hash.each do |side,info| #2
     info.each do |general,data| #3
       #binding.pry
       if general == :players #4
       #  binding.pry
         data.each do |names,stats| #5
+<<<<<<< HEAD
         # binding.pry
          stats.each do |k,v| #6
            #binding.pry
@@ -215,10 +228,19 @@ def big_shoe #1
             # binding.pry
            end#7
          end #6
+=======
+         binding.pry
+          if stats == :shoe #6
+            stats.each do |k,v| #7
+              binding.pry
+            end #7
+            end # 6
+>>>>>>> b90893b023fd7643e76f939c30d55279f1fd2fae
         end #5
       end #4
     end #3
   end #2
+<<<<<<< HEAD
   i = y.max
   #binding.pry
 end #1
@@ -260,3 +282,47 @@ def big_shoe_rebounds #1
   end #2
   #binding.pry
 end #1
+=======
+end #1
+big_shoe_rebounds
+=end
+
+
+
+#
+#max_quantity = fruits.values.max
+#max_fruits = fruits.select { |k, v| v == max_quantity }.keys
+
+# fast
+# 1 can i get the highest number of only pears?
+
+fruits = {
+"John"=> {"apples" => 2, "pears" => 15},
+"Geri"=> {"apples" => 7, "pears" => 18},
+"Fer"=> {"apples" => 10, "pears" => 12}
+}
+y=[]
+i = y.max
+fruits.each do |n,v|
+  binding.pry
+  v.each do |k,x|
+    binding.pry
+    if k=="pears"
+    y<<x
+    binding.pry
+    v.each do |o,u|
+      binding.pry
+      if o=="pears" && u == i
+        binding.pry
+    end
+    end
+  end
+end
+
+
+
+
+=begin
+#can i get the highest number of only pears from the entire hash and then return the persons amount of apples ?
+=end
+>>>>>>> b90893b023fd7643e76f939c30d55279f1fd2fae
